@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <oglasi>
     <oglas>
-        <kategorija tip="Automobili" />
+        <kategorija tip="automobili" />
         <datumIsteka>10.12.2022.</datumIsteka>
         <cena valuta="RSD">300.000</cena>
         <tekst>Prodajem automobil, dobro ocuvan</tekst>
@@ -13,7 +13,7 @@
         <email tip="sluzbeni">milos.dejanovic@polovniautomobili.rs</email>
     </oglas>
     <oglas>
-        <kategorija tip="Racunarske komponente" />
+        <kategorija tip="racunarskeKomponente" />
         <datumIsteka>15.06.2023.</datumIsteka>
         <cena valuta="RSD">300.000</cena>
         <tekst>Prodajem polovnu graficku karticu, koriscena godinu dana</tekst>
