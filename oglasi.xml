@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oglasi>
+    <oglas>
+        <kategorija>Automobili</kategorija>
+        <datumIsteka>10.12.2022.</datumIsteka>
+        <cena valuta="RSD">300.000</cena>
+        <tekst>Prodajem automobil, dobro ocuvan</tekst>
+        <oznaka atribut="marka">Fiat</oznaka>
+        <oznaka atribut="model">Punto</oznaka>
+        <oznaka atribut="broj vrata">5</oznaka>
+        <oznaka atribut="tip motora">Dizel</oznaka>
+        <email tip="privatni">milos.d55@gmail.com</email>
+        <email tip="sluzbeni">milos.dejanovic@polovniautomobili.rs</email>
+    </oglas>
+    <oglas>
+        <kategorija>Racunarske komponente</kategorija>
+        <datumIsteka>15.06.2023.</datumIsteka>
+        <cena valuta="RSD">300.000</cena>
+        <tekst>Prodajem polovnu graficku karticu, koriscena godinu dana</tekst>
+        <oznaka atribut="izdavac">Gigabyte</oznaka>
+        <oznaka atribut="model">GeForce GTX 1650 OC</oznaka>
+        <oznaka atribut="vram">4 GB</oznaka>
+        <oznaka atribut="tip memorije">GDDR5</oznaka>
+        <email tip="privatni">petarv125@yahoo.com</email>
+    </oglas>
+</oglasi>
