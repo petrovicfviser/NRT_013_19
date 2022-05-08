@@ -10,4 +10,4 @@
 <!ATTLIST kategorija tip (automobili|racunarskeKomponente|motocikli|bicikle|alati|stanovi) #REQUIRED>
 <!ATTLIST cena valuta CDATA "RSD">
 <!ATTLIST oznaka atribut CDATA #REQUIRED>
-<!ATTLIST email tip (privatni|poslovni) #REQUIRED>
+<!ATTLIST email tip (privatni|sluzbeni) #REQUIRED>
