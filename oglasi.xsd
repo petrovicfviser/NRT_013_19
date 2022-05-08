@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="vrednostCene">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="mailPattern">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@].*@[^.].*[.].{1}.*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="oglasi">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="oglas" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="kategorija">
+                                <xs:complexType>                                    
+                                    <xs:sequence />
+                                    <xs:attribute name="tip" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="automobili"/>
+                                                <xs:enumeration value="racunarskeKomponente"/>
+                                                <xs:enumeration value="motocikli"/>
+                                                <xs:enumeration value="bicikle"/>
+                                                <xs:enumeration value="alati"/>
+                                                <xs:enumeration value="stanovi"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="datumIsteka">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="([0-2][0-9]|3[01])[.](0[0-9]|1[02])[.][2-9][0-9][0-9][0-9][.]" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="cena">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="vrednostCene">
+                                            <xs:attribute name="valuta" default="RSD"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="tekst">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:minLength value="10"/>
+                                        <xs:maxLength value="180"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="oznaka" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="atribut" use="required"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="email" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="mailPattern">
+                                            <xs:attribute name="tip" use="required">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="privatni"/>
+                                                        <xs:enumeration value="sluzbeni"/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:extension>
+                                    </xs:simpleContent>                                    
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
