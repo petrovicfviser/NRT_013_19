@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oglasi</title>
+</head>
+<body>
+    <nav>
+        <a href="/oglasi">Pogledaj sve oglase</a>
+        <a href="/dodavanje">Dodaj oglas</a>
+    </nav>
+    <h1>Oglasi</h1>
+    <form method="get" action="/filtriraj"><select name="kategorija">
+        <option>Automobili</option>
+        <option>Racunarske komponente</option>
+        <option>Motocikli</option>
+        <option>Bicikle</option>
+        <option>Alati</option>
+        <option>Stanovi</option>
+    </select><button type="submit">Filtriraj</button></form>
+    <table>
+        <thead>
+            <tr>
+                <td>Kategorija</td>
+                <td>Tekst</td>
+                <td>Datum isteka oglasa</td>
+                <td>Cena</td>
+            </tr>
+        </thead>
+        <tbody>
+            #{data}
+        </tbody>
+    </table>
+</body>
+</html>

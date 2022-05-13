@@ -1,0 +1,57 @@
+[
+    {
+        "id": 0,
+        "kategorija": "automobili",
+        "datumIsteka": "2022-12-11",
+        "cena": {
+            "valuta": "RSD",
+            "vrednost": 300000
+        },
+        "tekst": "Prodajem automobil, dobro ocuvan",
+        "oznake": [
+            "Zapremina motora je 1500cm3",
+            "Punto",
+            5,
+            "Dizel"
+        ],
+        "mejlovi": [
+            {
+                "adresa": "milos.d55@gmail.com",
+                "tip": "privatni"
+            },
+            {
+                "adresa": "milos.dejanovic@polovniautomobili.rs",
+                "tip": "sluzbeni"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "kategorija": "Automobili",
+        "datumIsteka": "2022-05-27",
+        "cena": {
+            "valuta": "ASD",
+            "vrednost": 90
+        },
+        "tekst": "dasads",
+        "oznake": [
+            "asddas",
+            "asdasd",
+            "asdads"
+        ],
+        "mejlovi": [
+            {
+                "adresa": "wew@dssd.com",
+                "tip": "Privatni"
+            },
+            {
+                "adresa": "petarv125@yoo.co",
+                "tip": "Privatni"
+            },
+            {
+                "adresa": "petarv125@yoo.co",
+                "tip": "Privatni"
+            }
+        ]
+    }
+]

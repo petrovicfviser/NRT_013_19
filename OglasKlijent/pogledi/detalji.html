@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalji oglasa</title>
+</head>
+<body>
+    <nav>
+        <a href="/oglasi">Pogledaj sve oglase</a>
+        <a href="/dodavanje">Dodaj oglas</a>
+    </nav>
+    <h1>Detalji/Izmena oglasa</h1>
+    <form method="post" action="/izmeniOglas">
+        #{data}
+        <button type="submit">Izmeni oglas</button>
+    </form>
+</body>
+<script>
+    function dodajOznaku(){
+        document.getElementById('oznake').innerHTML += '<br><input type="text" name="oznake">'
+    }
+
+    function dodajMejl(){
+        document.getElementById('mejlovi').innerHTML += '<br><input type="email" name="mejl"><select name="tipMejla"><option>Privatni</option><option>Poslovni</option></select>'
+    }
+</script>
+</html>

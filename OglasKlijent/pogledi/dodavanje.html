@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodavanje oglasa</title>
+</head>
+<body>
+    <nav>
+        <a href="/oglasi">Pogledaj sve oglase</a>
+        <a href="/dodavanje">Dodaj oglas</a>
+    </nav>
+    <h1>Dodaj oglas</h1>
+    <form method="post" action="/dodajOglas">
+        <label for="kategorija">Kategorija: </label>
+        <select name="kategorija">
+            <option>Automobili</option>
+            <option>Racunarske komponente</option>
+            <option>Motocikli</option>
+            <option>Bicikle</option>
+            <option>Alati</option>
+            <option>Stanovi</option>
+        </select><br>
+        <label for="tekst">Tekst: </label><input type="text" name="tekst"><br>
+        <div>
+            <h3>Cena:</h3>
+            <label for="valuta">Valuta: </label><input type="text" name="valuta"><br>
+            <label for="cena">Cena: </label><input type="text" name="cena"><br>
+        </div><br>
+        <label for="datumIsteka">Datum isteka oglasa: </label><input type="date" name="datumIsteka">
+        <h3>Oznake:</h3>
+        <button onclick="dodajOznaku()" type="button">Dodaj oznaku</button>
+        <div id="oznake">
+            <input type="text" name="oznake">
+        </div>
+        <h3>Mejlovi:</h3>
+        <button onclick="dodajMejl()" type="button">Dodaj mejl</button>
+        <div id="mejlovi">
+            <input type="email" name="mejl">
+            <select name="tipMejla">
+                <option>Privatni</option>
+                <option>Poslovni</option>
+            </select>
+        </div>
+
+        <button type="submit">Dodaj oglas</button>
+    </form>
+</body>
+<script>
+    function dodajOznaku(){
+        document.getElementById('oznake').innerHTML += '<br><input type="text" name="oznake">'
+    }
+
+    function dodajMejl(){
+        document.getElementById('mejlovi').innerHTML += '<br><input type="email" name="mejl"><select name="tipMejla"><option>Privatni</option><option>Poslovni</option></select>'
+    }
+</script>
+</html>
